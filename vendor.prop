@@ -1,0 +1,19 @@
+# Keystore
+ro.hardware.keystore=mdfpp
+ro.security.keystore.keytype=sak,gak
+
+# opengles
+ro.opengles.version=196610
+
+# ril
+ro.ril.ecclist=911,112
+rild.libpath=/vendor/lib64/libsec-ril.so
+vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
+vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
+
+# Surface flinger
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.has_HDR_display=true
+
+# Developer Settings
+ro.frp.pst=/dev/block/persistent

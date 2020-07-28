@@ -1,0 +1,15 @@
+# hal_power_default
+
+get_prop(hal_power_default, vendor_camera_prop)
+
+# /dev/cluster[0-9]_freq_(max|min)
+allow hal_power_default pm_qos_device:chr_file rw_file_perms;
+
+# /sys/class/power_supply/battery/lcd
+allow hal_power_default sysfs_battery:dir r_dir_perms;
+allow hal_power_default sysfs_battery:file r_file_perms;
+allow hal_power_default sysfs_battery_writable:dir r_dir_perms;
+allow hal_power_default sysfs_battery_writable:file rw_file_perms;
+
+# /sys/devices/platform/148b0000.decon_f
+allow hal_power_default sysfs_decon:dir r_dir_perms;

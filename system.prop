@@ -1,0 +1,17 @@
+ro.arch=exynos9610
+ro.kernel.qemu=0
+ro.kernel.qemu.gles=2
+persist.demo.hdmirotationlock=false
+#Enable S.LSI USB settings
+dev.usbsetting.embedded=on
+
+#Enable csc for vendor image
+ro.vendor.cscsupported=1
+#Status of softsim
+persist.sys.softsim.status=default,default
+persist.sys.softsim.netmode=4g
+persist.sys.softsim.type=default
+#Cmc properties
+ro.cmc.device_type=pd
+ro.cmc.version=2.0
+
