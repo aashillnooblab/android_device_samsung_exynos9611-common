@@ -13,6 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+BUILD_TOP := $(shell pwd)
+
 PLATFORM_PATH := device/samsung/exynos9611-common
 
 # Board
@@ -41,9 +43,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
-# ReleaseTools
-TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)/releasetools
-
 # Render
 OVERRIDE_RS_DRIVER := libRSDriverArm.so
 
@@ -51,14 +50,7 @@ OVERRIDE_RS_DRIVER := libRSDriverArm.so
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/hardware/include
 
 # Kernel
-BOARD_KERNEL_BASE := 0x10000000
-BOARD_KERNEL_PAGESIZE := 2048
-BOARD_INCLUDE_RECOVERY_DTBO := true
-BOARD_PREBUILT_DTBOIMAGE := $(PLATFORM_PATH)/prebuilt/recovery-dtbo
-TARGET_PREBUILT_KERNEL := $(PLATFORM_PATH)/prebuilt/zImage
-BOARD_KERNEL_IMAGE_NAME := zImage
-
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --header_version 1 --board SRPSE30A002RU
+TARGET_PREBUILT_KERNEL := $(PLATFORM_PATH)/prebuilt/Image
 
 # Binder
 TARGET_USES_64_BIT_BINDER := true
