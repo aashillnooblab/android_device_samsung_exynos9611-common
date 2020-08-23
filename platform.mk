@@ -25,5 +25,17 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
+# Ramdisk 
+PRODUCT_PACKAGES += \
+	fstab.exynos9611 \
+	init.baseband.rc \
+	init.exynos9611.rc \
+	init.exynos9611.usb.rc \
+	init.gps.rc \
+	init.vendor.rilchip.rc \
+	init.vendor.rilcommon.rc \
+	wifi.rc \
+	wifi_slsi.rc \
+	ueventd.exynos7885.rc
 
 include $(PLATFORM_PATH)/platform/*.mk
